@@ -11,11 +11,11 @@ import javax.persistence.Entity;
 public class Foodstuff extends SerializableModel {
 
      private String name;
-     private String descrition;
+     private String description;
 
-    public Foodstuff(String name, String descrition) {
+    public Foodstuff(String name, String description) {
         this.name = name;
-        this.descrition = descrition;
+        this.description = description;
     }
 
 }
