@@ -23,8 +23,19 @@
         <td th:text="${foodstuff.price}"/>
     </tr>
     </tbody>
-
 </table>
+
+<div class="container center-pill">
+    <form action="#" th:action="@{/generallist}" th:object="${newFoodstuff}" method="post">
+        <p>Name: <input type="text" th:field="*{name}"></p>
+        <p>Price: <input type="text" th:field="*{price}"></p>
+        <p>
+            <button type="submit" name="action" value="save" class="btn btn-primary green">Save foodstuff</button>
+        </p>
+    </form>
+
+</div>
+
 
 </body>
 </html>

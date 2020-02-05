@@ -31,4 +31,9 @@ public class FoodService implements IFoodService {
     public Iterable<Foodstuff> findAll() {
         return foodRepository.findAll();
     }
+
+    @Override
+    public void deleteById(Long id) {
+        foodRepository.deleteById(id);
+    }
 }

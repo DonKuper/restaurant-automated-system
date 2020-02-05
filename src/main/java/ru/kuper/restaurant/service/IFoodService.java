@@ -12,4 +12,6 @@ public interface IFoodService {
 
     Foodstuff save(Foodstuff foodstuff);
 
+    void deleteById(Long id);
+
 }

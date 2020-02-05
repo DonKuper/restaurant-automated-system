@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div>It's a header</div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+<div class="container center-pill">
+    <h3>Editing of foodstuff</h3>
+</div>
+
+    <div class="container center-pill">
+        <form action="#" th:action="@{'/' + ${foodstuff.name}}" th:object="${foodstuff}" method="post">
+            <p>Name: <input type="text" th:field="*{name}"></p>
+            <p>Price: <input type="text" th:field="*{price}"></p>
+        </form>
+    </div>
+
+</body>
+</html>
