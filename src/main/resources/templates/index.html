@@ -7,24 +7,9 @@
 <body>
 
 <div class="container center-pill">
-    <h3>List of Products</h3>
+    <h3>Index</h3>
 </div>
 
-<table class="container center-pill">
-    <thread>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    </thread>
-    <tbody>
-    <tr th:each="foodstuff:${foodstuffs}">
-        <td th:text="${foodstuff.name}"/>
-        <td th:text="${foodstuff.description}"/>
-    </tr>
-    </tbody>
-
-</table>
 
 </body>
 </html>

@@ -17,13 +17,15 @@ public class Foodstuff {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
+    private Double price;
 
-    public Foodstuff(String name, String description) {
+    public Foodstuff(String name, Double price) {
         this.name = name;
-        this.description = description;
+        this.price = price;
     }
 
-    public Foodstuff(){}
+    public Foodstuff(){
+
+    }
 
 }

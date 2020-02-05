@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div>It's a header</div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+<div class="container center-pill">
+    <h3>List of Products</h3>
+</div>
+
+<table class="container center-pill">
+    <thread>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thread>
+    <tbody>
+    <tr th:each="foodstuff:${foodstuffs}">
+        <td th:text="${foodstuff.name}"/>
+        <td th:text="${foodstuff.price}"/>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>
