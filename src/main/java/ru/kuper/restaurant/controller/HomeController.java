@@ -40,12 +40,18 @@ public class HomeController {
     }
 
     @GetMapping("/{id}/edit")
-    public String editFoodstuffById(@PathVariable("id") Long id, Model model) {
+    public String editFoodstuffFormById(@PathVariable("id") Long id, Model model) {
         Optional foodstuffObject = foodService.findById(id);
         if (foodstuffObject.isPresent()) {
             model.addAttribute(foodstuffObject.get());
         }
         return "editFoodstuff";
+    }
+
+    @PostMapping("/{id}")
+    public String editFoodstuffById(@PathVariable("id") Long id, Foodstuff foodstuff) {
+        foodService.save(foodstuff);
+        return "redirect:/";
     }
 
 

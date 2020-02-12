@@ -11,11 +11,14 @@
 </div>
 
     <div class="container center-pill">
-        <form action="#" th:action="@{'/' + ${foodstuff.name}}" th:object="${foodstuff}" method="post">
+        <form action="#" th:action="@{'/' + ${foodstuff.id}}" th:object="${foodstuff}" method="post">
             <p>Name: <input type="text" th:field="*{name}"></p>
             <p>Price: <input type="text" th:field="*{price}"></p>
+        <input type="submit" value="edit foodstuff" class="btn btn-primary-green">
         </form>
     </div>
+
+</div>
 
 </body>
 </html>
