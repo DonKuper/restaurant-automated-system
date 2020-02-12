@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity
 @Setter
 @Getter
-public class Foodstuff {
+public class Foodstuff implements IFoodstuff{
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,5 +27,6 @@ public class Foodstuff {
     public Foodstuff(){
 
     }
+
 
 }
