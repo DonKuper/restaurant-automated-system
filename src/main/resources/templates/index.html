@@ -15,6 +15,7 @@
         <tr>
             <th>Name</th>
             <th>Price</th>
+            <th>Unit</th>
             <th></th>
             <th></th>
         </tr>
@@ -23,6 +24,7 @@
     <tr th:each="foodstuff:${foodstuffs}">
         <td th:text="${foodstuff.name}"/>
         <td th:text="${foodstuff.price}"/>
+        <td th:text="${foodstuff.unit}"/>
         <td><a href="" th:href="@{'/' + ${foodstuff.id} + '/edit'}">EDIT</a></td>
         <td><a href="" th:href="@{'/' + ${foodstuff.id} + '/delete'}">DELETE</a></td>
     </tr>
@@ -37,7 +39,6 @@
             <button type="submit" name="action" value="save" class="btn btn-primary green">Save foodstuff</button>
         </p>
     </form>
-
 </div>
 
 </body>

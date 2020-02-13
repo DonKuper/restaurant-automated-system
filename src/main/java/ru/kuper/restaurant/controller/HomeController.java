@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.kuper.restaurant.model.Foodstuff;
+import ru.kuper.restaurant.model.enums.DeliverState;
+import ru.kuper.restaurant.model.enums.OnKitchenState;
+import ru.kuper.restaurant.model.enums.Units;
 import ru.kuper.restaurant.service.FoodService;
 
 import java.util.Optional;
@@ -29,6 +32,10 @@ public class HomeController {
 
     @PostMapping(params = "action=save")
     public String saveFoodstuff(Foodstuff foodstuff) {
+        foodstuff.setQuantity_for_deliver(1.0);
+        foodstuff.setDeliver_state(DeliverState.DOESNT_NEED_TO_BE_PURCHASED);
+        foodstuff.setOn_kitchen_state(OnKitchenState.INNESSCESSARY);
+        foodstuff.setUnit(Units.KG);
         foodService.save(foodstuff);
         return "redirect:/";
     }
