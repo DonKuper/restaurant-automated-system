@@ -57,6 +57,10 @@ public class HomeController {
 
     @PostMapping("/{id}")
     public String editFoodstuffById(@PathVariable("id") Long id, Foodstuff foodstuff) {
+        foodstuff.setUnit(Units.KG);
+        foodstuff.setDeliver_state(DeliverState.DOESNT_NEED_TO_BE_PURCHASED);
+        foodstuff.setOn_kitchen_state(OnKitchenState.INNESSCESSARY);
+        foodstuff.setQuantity_for_deliver(1.0);
         foodService.save(foodstuff);
         return "redirect:/";
     }
