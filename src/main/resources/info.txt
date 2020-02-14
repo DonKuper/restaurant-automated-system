@@ -1,0 +1,6 @@
+Один User может иметь только один Order;
+User может быть трех типов:     STOREKEEPER,
+                                SUPPLIER,
+                                KITCHENER
+Order создает KITCHENER;
+SUPPLIER получает Order для доставки со статусом товаров в

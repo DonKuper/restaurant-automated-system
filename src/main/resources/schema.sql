@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS foodstuff;
+DROP TABLE IF EXISTS user;
 
 CREATE TABLE foodstuff (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -9,3 +10,11 @@ CREATE TABLE foodstuff (
   on_kitchen_state VARCHAR(100) NOT NULL,
   unit VARCHAR(100) NOT NULL
   );
+
+CREATE TABLE user (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  post VARCHAR(100) NOT NULL
+);
+
+
